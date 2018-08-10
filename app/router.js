@@ -10,3 +10,5 @@ Router.map(function() {
 });
 
 export default Router;
+
+//se piden datos y se encarga de controlar la información 
