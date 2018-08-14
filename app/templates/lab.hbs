@@ -1,0 +1,47 @@
+<p>My lucky day:</p>
+<button {{action 'myLuckyDay' on='click'}}>Aprieta</button>
+{{luckyDay}}
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form  {{action 'addTweet' on='submit' }}>
+<p>{{input type="text" value=newTweet}} <button>Send</button></p>
+
+<ul>
+	{{#each tweets as |tweet|}}
+	  <li>{{tweet.usuario}} -{{tweet.descripcion}}</li>
+	{{else}}
+		<p>No hay elementos</p>
+	{{/each}}
+</ul>
+</form>
+<ul>
+	{{#each weekDays as |weekDay|}}
+	{{#if weekDay.number}}
+	  <li>{{weekDay.number}}-{{weekDay.day}}</li>
+	{{/if}}
+	{{/each}}
+</ul>
+
+
+<br>
+<br>
+<br>
+
+{{input type='text' value=newDay}}
+<button{{action 'addDay' on='click'}}>Añade nuevo día</button>
+
+
+{{input type="text" value=dog}}
+{{dog}}
+
+{{input type="text" value=cat}}
+{{cat}}
+
+<button{{action 'doSomething' on='click'}}>Aprieta</button>

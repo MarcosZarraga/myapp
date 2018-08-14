@@ -1,11 +1,7 @@
 <h1>Hola mundo</h1>
-{{input type="text" value=dog}}
-{{dog}}
 
-{{input type="text" value=cat}}
-{{cat}}
 
-<button{{action 'doSomething' on='click'}}>Aprieta</button>
+
 
 <form {{action 'valdiarUsuario' on='submit'}}>
 	<p>User: {{input type="text" value=user}}</p>
@@ -14,6 +10,4 @@
 </form>
 
 
-<p>My lucky day:</p>
-<button {{action 'myLuckyDay' on='click'}}>Aprieta</button>
-{{luckyDay}}
+{{outlet}}
