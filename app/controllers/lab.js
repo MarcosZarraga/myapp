@@ -55,20 +55,7 @@ export default Ember.Controller.extend({
 			console.log(cat);
 		},
 
-		valdiarUsuario()
-		{
-			var usuario= this.get('user');
-			if(usuario=="A01271642" && this.get('password')==="1234"){
-				console.log("usuario valido");
-			}
-			else {
-				console.log("Usuario invalido");
-			}
-
-			this.set('user',"");
-			this.set('password',"");
-			
-		},
+		
 
 
 		myLuckyDay(){
@@ -97,6 +84,18 @@ export default Ember.Controller.extend({
 			})
 			this.set('newTweet', "")
 
+		},
+
+		deleteTweet(tweet)
+		{
+			var tweets = this.get('tweets');
+			let result = confirm('Seguro weon? :( ' + tweet.descripcion);
+			if(result)
+			{
+				tweets.removeObject(tweet);
+			}
+			
+			
 		}
 
 	}

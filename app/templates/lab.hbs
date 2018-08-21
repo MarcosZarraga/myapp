@@ -15,7 +15,8 @@
 
 <ul>
 	{{#each tweets as |tweet|}}
-	  <li>{{tweet.usuario}} -{{tweet.descripcion}}</li>
+	  <p>{{tweet.usuario}}</p>
+	  <p>{{input type= 'text' value=tweet.descripcion}} <button {{action 'deleteTweet' tweet on='click' }}>X</button></p>
 	{{else}}
 		<p>No hay elementos</p>
 	{{/each}}
