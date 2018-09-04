@@ -71,7 +71,7 @@ export default Ember.Controller.extend({
 				day: newDay,
 				//number:Math.floor(Math.random()*100),
 				'mi propiedad': 'hola'
-			})
+			});
 		},
 
 		addTweet(){
@@ -81,8 +81,8 @@ export default Ember.Controller.extend({
 			tweets.pushObject({
 				'usuario' : 'Marcos',
 				'descripcion':  newTweet
-			})
-			this.set('newTweet', "")
+			});
+			this.set('newTweet', "");	
 
 		},
 

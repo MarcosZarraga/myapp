@@ -1,3 +1,9 @@
+{{#each model as |meal|}}
+<p>{{meal.name}}</p>
+{{/each}}
+<br>
+<br>
+<br>
 <p>My lucky day:</p>
 <button {{action 'myLuckyDay' on='click'}}>Aprieta</button>
 {{luckyDay}}
