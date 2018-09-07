@@ -1,13 +1,22 @@
 {{#each model as |meal|}}
-<p>{{meal.name}}</p>
+<p>{{input value=meal.name}} 
+	<button {{action "editarComidita" meal}}>Editar</button> 
+	<button {{action "eliminarComidita" meal}}>Eliminar</button> </p>
 {{/each}}
 <br>
 <br>
 <br>
+<form {{action "addComidita" on='submit'}}>
+	<p>Agregar una comida</p>
+	<p>{{input type="text" value=comidita}}</p>
+	<button disabled="{{if isSaving 'true'}}">Añadir</button>
+</form>
+<br><br>
 <p>My lucky day:</p>
 <button {{action 'myLuckyDay' on='click'}}>Aprieta</button>
 {{luckyDay}}
-
+<br>
+<br>
 
 <br>
 <br>
