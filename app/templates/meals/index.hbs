@@ -1,0 +1,15 @@
+
+{{#each model as |meal|}}
+<p>{{input value=meal.name}} 
+	{{link-to meal.name "meals.meal-detail" meal.id}}
+</p>
+{{/each}}
+<br>
+<br>
+<br>
+<form {{action "addComidita" on='submit'}}>
+	<p>Agregar una comida</p>
+	<p>{{input type="text" value=comidita}}</p>
+	<button >Añadir</button>
+</form>
+<br><br>

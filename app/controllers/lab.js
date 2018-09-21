@@ -46,7 +46,7 @@ export default Ember.Controller.extend({
 
 
 	],
-	isSaving:false,
+	
 
 	actions:
 	 {
@@ -97,42 +97,7 @@ export default Ember.Controller.extend({
 			}
 			
 			
-		},
-		addComidita()
-		{
-			var comidita= this.get('comidita');
-			var meal= this.store.createRecord('meal', {name: comidita});
-			//var resultado=confirm("¿Añadir esta comida ? :( ");
-			var isSaving= this.get('isSaving');
-			this.set(isSaving, true);
-			if (resultado) {
-				console.log('Guardando');
-				meal.save().then(()=>{
-					console.log('Simona');
-				}).catch((e)=>{
-					console.log('Nelpas'+ e);
-				}).finally(()=>{
-					this.set(isSaving, false);
-				})					
-			}
-			
-		},
-		editarComidita(comidita)
-		{
-			var resultado=confirm("¿Seguro ? :( ");
-			if (resultado) {
-				comidita.save();
-			}
-			
-		},
-		eliminarComidita(comidita)
-		{
-			var resultado=confirm("¿Seguro que quieres borrar? :( ");
-			if (resultado) {
-				comidita.destroyRecord();
-			}
-			
-		}	
-
+		}
+		
 	}
 });
