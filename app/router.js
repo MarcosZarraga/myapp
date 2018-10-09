@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('lab',{path :'/lab'});
   this.route('meals', function() {
     this.route('meal-detail',{path : '/:id'});
+    this.route('products');
   });
 });
 
