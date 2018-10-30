@@ -5,7 +5,19 @@
 
 <h3>Holis</h3>
  
-{{input type="text" value=model.name}}
+{{input type="text" value=model.meal.name}}
 
- 	<button {{action "editarComidita" model}}>Editar</button> 
-	<button {{action "eliminarComidita" model}}>Eliminar</button> 
+ 	<button {{action "editarComidita" model.meal}}>Editar</button> 
+	<button {{action "eliminarComidita" model.meal}}>Eliminar</button> 
+
+<p>Foods</p>
+<br>
+{{#each model.foods as |food|}}
+	{{food.name}}
+{{/each}}
+<br>
+<p>Productos</p>
+<br>
+{{#each model.products as |product|}}
+	{{product.name}}
+{{/each}}
