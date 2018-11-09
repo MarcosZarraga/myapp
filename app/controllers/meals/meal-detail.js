@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
+	calculator: Ember.inject.service(),
 	actions:{
 		editarComidita(comidita)
 		{
@@ -15,7 +17,9 @@ export default Ember.Controller.extend({
 			var resultado=confirm("¿Seguro que quieres borrar? :( ");
 			if (resultado) {
 				comidita.destroyRecord().then(()=>{
-					this.transitionToRoute("meals")
+					 this.calculator.remove(comidita.totalCalories);
+					this.transitionToRoute("meals");
+
 				}).catch((e)=>{
 					console.log(e);
 				})

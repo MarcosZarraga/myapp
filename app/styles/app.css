@@ -1,0 +1,17 @@
+.slim{
+	background-image: url("http://diariodegastronomia.com/wp-content/uploads/2016/11/En-la-comida-los-colores-s%C3%AD-importan-759x500.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 300px;
+	width: 300px;
+
+}
+
+.fatty{
+	background-image: url("https://static.saludenvidiable.com/wp-content/uploads/2016/09/ansiedad_istock_4_destacada-1024x700.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 300px;
+	width: 300px;
+}

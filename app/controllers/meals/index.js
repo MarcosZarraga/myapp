@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+	calculator: Ember.inject.service(),
 	actions:{
 		addComidita()
 		{
@@ -10,7 +11,7 @@ export default Ember.Controller.extend({
 			if (resultado) {
 				console.log('Guardando');
 				meal.save().then(()=>{
-					console.log('Simona');
+					 this.calculator.add(comidita.totalCalories);
 				}).catch((e)=>{
 					console.log('Nelpas'+ e);
 				});			
